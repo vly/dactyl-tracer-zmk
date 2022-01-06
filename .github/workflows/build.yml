@@ -93,7 +93,7 @@ jobs:
         with:
           name: firmware
           path: build/artifacts
-       - name: West Build (${{ steps.variables.outputs.display-name }})
+      - name: West Build (${{ steps.variables.outputs.display-name }})
         run: |
           west build -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/config ${{ steps.variables.outputs.extra-cmake-args }}_right ${{ matrix.cmake-args }}
       - name: ${{ steps.variables.outputs.display-name }} Kconfig file
