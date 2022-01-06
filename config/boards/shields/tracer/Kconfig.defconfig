@@ -1,0 +1,22 @@
+if SHIELD_TRACER_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "Tracer"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_TRACER_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "Tracer Left"
+
+endif
+
+if SHIELD_TRACER_LEFT || SHIELD_TRACER_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif

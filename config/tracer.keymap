@@ -1,0 +1,76 @@
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define CONTROL 3
+#define CLEAN   4
+
+/ {
+	keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
+			bindings = <
+				&kp Q         &kp W          &kp E     &kp R         &kp T            &kp Y   &kp U        &kp I     &kp O          &kp P
+				&lt RAISE A   &lt CONTROL S  &kp D     &lt LOWER F   &kp G            &kp H   &lt LOWER J  &kp K     &lt CONTROL L  &lt RAISE SEMI
+				&mt LSHIFT Z  &kp X          &kp C     &kp V         &kp B            &kp N   &kp M        &kp COMMA &kp DOT        &mt RSHIFT SLASH
+                              &kp LEFT       &kp RIGHT                                                     &kp UP    &kp DOWN
+                                              &mt LGUI BSPC &mt LCTL ESC           &kp PG_UP &tog CLEAN
+                                              &mt LCTL ENTER &mt RGUI SPACE       &kp PG_DN &mt RCTL ENTER
+			>;
+
+		};
+
+		lower {
+			bindings = <
+				&kp TAB    &kp W &kp E &kp R &kp T  &kp TILDE   &kp GRAVE  &kp LPAR    &kp RPAR   &kp MINUS
+				&kp A    &kp S &kp D &kp PLUS &kp G  &kp H   &kp J  &kp LBRC    &kp RBRC   &kp DQT
+				&mt LSHIFT Z    &kp X &kp C &kp V &kp B  &kp N   &kp PIPE  &kp LBKT &kp RBKT &kp BSLH
+                &kp LEFT &kp RIGHT                   &kp UP &kp DOWN
+                      &mt LGUI BSPC &mt LCTL ESC         &kp PG_UP &mt RGUI SPACE
+                        &mt LCTL ENTER &mt RGUI SPACE         &kp PG_DN &mt RCTL ENTER
+			>;
+
+		};
+
+        raise {
+			bindings = <
+						&kp N1    &kp N2 &kp N3 &kp N4 &kp N5  &kp N6   &kp N7  &kp N8    &kp N9   &kp N0
+				&kp EXCL    &kp AT &kp HASH &kp DLLR &kp PRCNT  &kp CARET   &kp AMPS  &kp STAR    &kp LPAR   &kp RPAR
+				&mt LSHIFT Z    &kp X &kp C &kp V &kp B  &kp N   &kp M  &kp COMMA &kp DOT &mt RSHIFT BSLH
+                &kp LEFT &kp RIGHT                   &kp UP &kp DOWN
+                      &mt LGUI BSPC &mt LCTL ESC         &kp PG_UP &mt RGUI SPACE
+                        &mt LCTL ENTER &mt RGUI SPACE         &kp PG_DN &mt RCTL ENTER
+		>;
+
+		};
+
+		control {
+			bindings = <
+				&kp Q    &kp W &kp LS(LG(U)) &kp LS(LG(I)) &kp T  &kp Y   &kp U  &kp I    &kp O   &kp UNDER
+				&kp A    &kp LS(LG(LEFT)) &kp LS(LG(J)) &kp LS(LG(K)) &kp LS(LG(RIGHT))  &kp H   &kp J  &kp K    &kp L   &kp SQT
+				&mt LSHIFT Z    &kp X &kp C &kp V &kp B  &kp N   &kp M  &kp COMMA &kp DOT &mt RSHIFT BSLH
+                &kp LEFT &kp RIGHT                   &kp UP &kp DOWN
+                      &mt LGUI BSPC &mt LCTL ESC         &kp PG_UP &mt RGUI SPACE
+                        &mt LCTL ENTER &mt RGUI SPACE         &kp PG_DN &mt RCTL ENTER
+	            >;
+
+		};
+
+        clean {
+			bindings = <
+				&kp Q         &kp W          &kp E     &kp R         &kp T            &kp Y   &kp U        &kp I     &kp O          &kp P
+				&kp A         &kp S          &kp D     &kp F         &kp G            &kp H   &kp J        &kp K     &kp L          &kp SEMI
+				&mt LSHIFT Z  &kp X          &kp C     &kp V         &kp B            &kp N   &kp M        &kp COMMA &kp DOT        &mt RSHIFT SLASH
+                              &kp LEFT       &kp RIGHT                                                     &kp UP    &kp DOWN
+                                              &mt LGUI BSPC &mt LCTL ESC           &kp PG_UP &tog CLEAN
+                                              &mt LCTL ENTER &mt RGUI SPACE       &kp PG_DN &mt RCTL ENTER
+	            >;
+
+		};
+	};
+};
