@@ -7,6 +7,7 @@ A wireless build of mjohn's excellent Dactyl Tracer using ZMK firmware.
 The following is the hardware used for this build:
 
 - Dactyl tracer case prints (used generic PLA+)
+- Deep-dish case plates to allow space for battery and height of the switches
 - nice!nano v2 controllers x2
 - Alps SKCC green switches x44
 - Single switch PCBs x44
