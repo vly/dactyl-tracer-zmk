@@ -71,17 +71,17 @@ jobs:
       - name: West Build (${{ steps.variables.outputs.display-name }})
         run: |
           for shield in ${{ matrix.shield }}; do
-            west build --pristine -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/config -DSHIELD=${shield} ${{ matrix.cmake-args }}
+            west build --pristine -s zmk/app -b ${{ matrix.board }} -- -DZMK_CONFIG=${GITHUB_WORKSPACE}/config -DSHIELD=${{shield}} ${{ matrix.cmake-args }}
             if [ -f "build/zephyr/${{ matrix.board }}.dts.pre.tmp" ]; then cat -n build/zephyr/${{ matrix.board }}.dts.pre.tmp; fi
             if [ -f "build/zephyr/zephyr.dts" ]; then cat -n build/zephyr/zephyr.dts; fi
             cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
             mkdir build/artifacts
             if [ -f build/zephyr/zmk.uf2 ]
              then
-               cp build/zephyr/zmk.uf2 "build/artifacts/${shield}.uf2"
+               cp build/zephyr/zmk.uf2 "build/artifacts/${{shield}}.uf2"
             elif [ -f build/zephyr/zmk.hex ]
              then
-               cp build/zephyr/zmk.hex "build/artifacts/${shield}.hex"
+               cp build/zephyr/zmk.hex "build/artifacts/${{shield}.hex"
             fi
           done
       - name: Archive (${{ steps.variables.outputs.display-name }})
