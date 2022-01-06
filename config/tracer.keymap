@@ -29,7 +29,7 @@
 			bindings = <
 				&kp TAB    &kp W &kp E &kp R &kp T  &kp TILDE   &kp GRAVE  &kp LPAR    &kp RPAR   &kp MINUS
 				&kp A    &kp S &kp D &kp PLUS &kp G  &kp H   &kp J  &kp LBRC    &kp RBRC   &kp DQT
-				&mt LSHIFT Z    &kp X &kp C &kp V &kp B  &kp N   &kp PIPE  &kp LBKT &kp RBKT &kp BSLH
+				&kp EQUAL    &kp X &kp C &kp V &kp B  &kp N   &kp PIPE  &kp LBKT &kp RBKT &kp BSLH
                 &kp LEFT &kp RIGHT                   &kp UP &kp DOWN
                       &mt LGUI BSPC &mt LCTL ESC         &kp PG_UP &mt RGUI SPACE
                         &mt LCTL ENTER &mt RGUI SPACE         &kp PG_DN &mt RCTL ENTER
