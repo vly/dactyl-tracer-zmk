@@ -14,4 +14,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: [ "tracer_left", "tracer_right" ]
+    shield: tracer

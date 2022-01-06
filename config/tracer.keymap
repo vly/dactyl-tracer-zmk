@@ -9,6 +9,10 @@
 #define CONTROL 3
 #define CLEAN   4
 
+&mt {
+   tapping-term-ms = <400>;
+};
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
