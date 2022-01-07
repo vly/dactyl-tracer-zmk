@@ -59,8 +59,9 @@
 				&kp A    &kp LS(LG(LEFT)) &kp LS(LG(J)) &kp LS(LG(K)) &kp LS(LG(RIGHT))  &kp H   &kp J  &kp K    &kp L   &kp SQT
 				&mt LSHIFT Z    &kp X &kp C &kp V &kp B  &kp N   &kp M  &kp COMMA &kp DOT &mt RSHIFT BSLH
                 &kp LEFT &kp RIGHT                   &kp UP &kp DOWN
-                      &mt LGUI BSPC &mt LCTL ESC         &kp PG_UP &mt RGUI SPACE
+                      &mt LGUI BSPC &mt LCTL ESC         &kp PG_UP &bt BT_CLR
                         &mt LCTL ENTER &mt RGUI SPACE         &kp PG_DN &mt RCTL ENTER
+                        &kp X &kp Y
 	            >;
 
 		};

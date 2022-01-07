@@ -14,7 +14,7 @@ The following is the hardware used for this build:
 - 1100mAh LiPo battery x2
 - Omron B3F1072N switches for bootloading x2
 - USB-c extension cables x2
-- m3 brass heat-sunk threads and m3 10mm screws
+- m3 brass heat-sunk threads and m3 10mm bolts
 
 Optional components
 
@@ -35,4 +35,4 @@ For the wiring up of the switches, I shamelessly pilfered [cy384](https://github
 
 Nice!nano controllers are a pleasure to work with, and running time on a single charge is >3 months. 
 
-Total project material cost was approximately $150 AUD with half of that were the controllers.
+Total project material cost was approximately $150 AUD with the controllers accounting for half of that.
